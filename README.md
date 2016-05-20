@@ -4,7 +4,7 @@ Automated builded images for rust-lang with rustup, "the ultimate way to install
 
 # Usage
 
-#### note: the stable/beta/nightly branches does not have package musl-tools target and x86_64-unknown-linux-musl installed by default.
+###### note: the stable/beta/nightly branches does not have the package "musl-tools" and the target "x86_64-unknown-linux-musl" installed by default.
 
 1. pull the images:
 
