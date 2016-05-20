@@ -4,6 +4,8 @@ Automated builded images for rust-lang with rustup, "the ultimate way to install
 
 # Usage
 
+#### note: the stable/beta/nightly branches does not have package musl-tools target and x86_64-unknown-linux-musl installed by default.
+
 1. pull the images:
 
 ``` shell
@@ -15,4 +17,11 @@ Automated builded images for rust-lang with rustup, "the ultimate way to install
 ``` dockerfile
 FROM liuchong/rustup
 ...
+```
+
+3. musl static building:
+
+``` bash
+# you can also use "latest", which is the same as "musl".
+docker run -v $PWD:/src -w /src -t liuchong/rustup:musl cargo build --release
 ```

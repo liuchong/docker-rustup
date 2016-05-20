@@ -2,10 +2,16 @@ FROM debian:latest
 MAINTAINER Liu Chong <mail@clojure.cn>
 WORKDIR /root
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y build-essential openssl ca-certificates libssl-dev curl file && \
-    apt-get clean && \
-    curl https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-setup -O && \
-    chmod +x rustup-setup && \
-    ./rustup-setup --default-toolchain nightly -y && \
-    rm -f rustup-setup
-ENV PATH="/root/.cargo/bin:$PATH"
+    apt-get install --no-install-recommends -y \
+    build-essential ca-certificates curl file xutils-dev && \
+    apt-get clean
+RUN curl https://sh.rustup.rs -sSf | \
+    sh -s -- --default-toolchain nightly -y
+RUN curl https://www.openssl.org/source/openssl-1.0.2h.tar.gz -O && \
+    tar -xzf openssl-1.0.2h.tar.gz && \
+    cd openssl-1.0.2h && ./config && make depend && make install && \
+    cd .. && rm -rf openssl-1.0.2h*
+ENV PATH="/root/.cargo/bin:$PATH" \
+    OPENSSL_LIB_DIR=/usr/local/ssl/lib \
+    OPENSSL_INCLUDE_DIR=/usr/local/ssl/include \
+    OPENSSL_STATIC=1
