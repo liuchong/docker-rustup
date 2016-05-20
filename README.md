@@ -1,4 +1,4 @@
-# multirust
+# rustup
 
 Automated builded images for rust-lang with rustup, "the ultimate way to install RUST"
 
