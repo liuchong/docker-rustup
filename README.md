@@ -27,3 +27,13 @@ docker run -v $PWD:/build_dir -w /build_dir -t liuchong/rustup:musl cargo build 
 # or, you may want also to fix the ownership as below:
 docker run -v $PWD:/build_dir -w /build_dir -t liuchong/rustup:musl sh -c "cargo build --release && chown -R $(id -u):$(id -g) target"
 ```
+
+then, you can write a dockerfile like this and build you app image(so, the image will be very small):
+
+``` dockerfile
+FROM scratch
+ADD target/x86_64-unknown-linux-musl/release/your-app /
+CMD ["/your-app"]
+# or something like this:
+# CMD ["/your-app", "--production"]
+```
