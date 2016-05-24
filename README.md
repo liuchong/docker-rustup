@@ -24,8 +24,8 @@ FROM liuchong/rustup
 ``` bash
 # you can also use "latest", which is the same as "musl".
 docker run -v $PWD:/build_dir -w /build_dir -t liuchong/rustup:musl cargo build --release
-# or, you may want also to fix the ownership as below:
-docker run -v $PWD:/build_dir -w /build_dir -t liuchong/rustup:musl sh -c "cargo build --release && chown -R $(id -u):$(id -g) target"
+# or, you may want also to fix the ownership and remove container after run as below:
+docker run --rm -v $PWD:/build_dir -w /build_dir -t liuchong/rustup:musl sh -c "cargo build --release && chown -R $(id -u):$(id -g) target"
 ```
 
 then, you can write a dockerfile like this and build you app image(so, the image will be very small):
