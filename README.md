@@ -1,25 +1,36 @@
 # rustup
 
-Automated builded images for rust-lang with rustup, "the ultimate way to install RUST"
+Automated builded images for rust-lang with musl added. using rustup "the ultimate way to install RUST".
 
 # Usage
 
-###### note: the stable/beta/nightly branches does not have the package "musl-tools" and the target "x86_64-unknown-linux-musl" installed by default.
-
-1. pull the images:
+#### pull the images:
 
 ``` shell
 > docker pull liuchong/rustup
+> docker pull liuchong/rustup:musl
 ```
 
-2. setup the Dockerfile:
+the tags are:
+
+- stable: [(stable/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile)
+- beta: [(beta/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile)
+- nightly: [(nightly/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile)
+- musl: [(musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/musl/Dockerfile)
+the Dockerfile of tag "latest" is using "musl" version.
+
+***note:*** *the stable/beta/nightly branches does not have the package "musl-tools" and the target "x86_64-unknown-linux-musl" installed by default.*
+
+#### use the image
+
+###### just setup the Dockerfile:
 
 ``` dockerfile
-FROM liuchong/rustup
+FROM liuchong/rustup:stable
 ...
 ```
 
-3. musl static building:
+###### or you maybe prefer to make a musl static building:
 
 ``` bash
 # you can also use "latest", which is the same as "musl".
