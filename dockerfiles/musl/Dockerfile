@@ -4,7 +4,8 @@ WORKDIR /root
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     build-essential ca-certificates curl file xutils-dev \
-    musl-tools nano vim emacs && \
+    musl-tools autoconf libtool \
+    nano vim emacs && \
     apt-get clean
 RUN curl https://sh.rustup.rs -sSf | \
     sh -s -- --default-toolchain stable -y && \
