@@ -6,7 +6,7 @@ RUN apt-get update && \
     build-essential ca-certificates curl file xutils-dev \
     musl-tools autoconf libtool \
     nano vim emacs && \
-    apt-get clean
+    rm -rf /var/lib/apt/lists/*
 RUN curl https://sh.rustup.rs -sSf | \
     sh -s -- --default-toolchain stable -y && \
     /root/.cargo/bin/rustup update beta && \
