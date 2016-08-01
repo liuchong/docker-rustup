@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:stretch
 MAINTAINER Liu Chong <mail@clojure.cn>
 WORKDIR /root
 RUN apt-get update && \
