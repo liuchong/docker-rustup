@@ -12,6 +12,10 @@ RUN curl https://sh.rustup.rs -sSf | \
     /root/.cargo/bin/rustup update beta && \
     /root/.cargo/bin/rustup update nightly && \
     /root/.cargo/bin/rustup target add x86_64-unknown-linux-musl && \
+    /root/.cargo/bin/rustup target add x86_64-unknown-linux-musl \
+    --toolchain beta-x86_64-unknown-linux-gnu && \
+    /root/.cargo/bin/rustup target add x86_64-unknown-linux-musl \
+    --toolchain nightly-x86_64-unknown-linux-gnu && \
     mkdir /.cargo && \
     echo "[build]\ntarget = \"x86_64-unknown-linux-musl\"" > /.cargo/config
 ENV PATH=/root/.cargo/bin:$PATH \
