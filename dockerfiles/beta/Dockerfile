@@ -13,7 +13,7 @@ RUN curl https://sh.rustup.rs -sSf | \
     sh -s -- --default-toolchain beta -y
 
 ENV PATH=/root/.cargo/bin:$PATH \
-    SSL_VERSION=1.0.2h
+    SSL_VERSION=1.0.2j
 
 RUN curl https://www.openssl.org/source/openssl-$SSL_VERSION.tar.gz -O && \
     tar -xzf openssl-$SSL_VERSION.tar.gz && \
