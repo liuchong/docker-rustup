@@ -6,7 +6,9 @@ WORKDIR /root
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-    build-essential ca-certificates curl file xutils-dev && \
+    ca-certificates curl file \
+    build-essential \
+    autoconf automake autotools-dev libtool xutils-dev && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl https://sh.rustup.rs -sSf | \
