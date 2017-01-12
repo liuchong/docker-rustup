@@ -14,12 +14,16 @@ Automated builded images for rust-lang with musl added. using rustup "the ultima
 the tags are:
 
 - stable: [(stable/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile)
+- stable-musl: [(stable/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile_musl)
 - beta: [(beta/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile)
+- beta-musl: [(beta/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile_musl)
 - nightly: [(nightly/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile)
-- musl: [(musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/musl/Dockerfile)
-the Dockerfile of tag "latest" is using "musl" version.
+- nightly-musl: [(nightly/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile_musl)
+- all3: [(all3/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile)
+- all3-musl, musl, latest: [(all3/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile_musl)
+- plus: [(all3/Dockerfile_plus)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile_plus)
 
-***note:*** *the stable/beta/nightly branches does not have the package "musl-tools" and the target "x86_64-unknown-linux-musl" installed by default.*
+***note:*** *the stable/beta/nightly tags does not have the package "musl-tools" and the target "x86_64-unknown-linux-musl" installed by default.*
 
 #### use the image
 
