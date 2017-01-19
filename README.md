@@ -2,7 +2,7 @@
 
 Automated builded images on [store](https://store.docker.com/community/images/liuchong/rustup/) and [hub](https://hub.docker.com/r/liuchong/rustup/) for rust-lang with musl added, using rustup "the ultimate way to install RUST".
 
-***note:*** *Please check [liuchong/rustup tags](https://store.docker.com/community/images/liuchong/rustup/tags) on [store](https://store.docker.com/) instead of [Build Details](https://hub.docker.com/r/liuchong/rustup/builds/)*
+***note:*** *Please check [liuchong/rustup tags](https://store.docker.com/community/images/liuchong/rustup/tags) on [store](https://store.docker.com/) instead of [Build Details](https://hub.docker.com/r/liuchong/rustup/builds/) on [hub](https://hub.docker.com/)*
 
 # Usage
 
