@@ -1,4 +1,4 @@
-FROM liuchong/rustup:beta
+FROM liuchong/rustup:stable
 
 MAINTAINER Liu Chong <mail@clojure.cn>
 
@@ -10,9 +10,9 @@ RUN apt-get update && \
     musl-tools && \
     rm -rf /var/lib/apt/lists/*
 
-# all 3 musl targets
+# install musl target
 RUN rustup target add x86_64-unknown-linux-musl \
-    --toolchain beta-x86_64-unknown-linux-gnu
+    --toolchain stable-x86_64-unknown-linux-gnu
 
 # make default target to musl
 RUN mkdir /.cargo && \

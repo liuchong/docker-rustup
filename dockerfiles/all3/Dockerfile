@@ -23,7 +23,7 @@ ENV OPENSSL_LIB_DIR=/usr/local/ssl/lib \
     OPENSSL_INCLUDE_DIR=/usr/local/ssl/include \
     OPENSSL_STATIC=1
 
-# all 3 toolchains
+# install all 3 toolchains
 RUN curl https://sh.rustup.rs -sSf | \
     sh -s -- --default-toolchain stable -y && \
     /root/.cargo/bin/rustup update beta && \

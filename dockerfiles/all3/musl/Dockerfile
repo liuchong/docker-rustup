@@ -1,4 +1,4 @@
-FROM liuchong/rustup:nightly
+FROM liuchong/rustup:all3
 
 MAINTAINER Liu Chong <mail@clojure.cn>
 
@@ -10,8 +10,12 @@ RUN apt-get update && \
     musl-tools && \
     rm -rf /var/lib/apt/lists/*
 
-# all 3 musl targets
+# install all 3 musl targets
 RUN rustup target add x86_64-unknown-linux-musl \
+    --toolchain stable-x86_64-unknown-linux-gnu && \
+    rustup target add x86_64-unknown-linux-musl \
+    --toolchain beta-x86_64-unknown-linux-gnu && \
+    rustup target add x86_64-unknown-linux-musl \
     --toolchain nightly-x86_64-unknown-linux-gnu
 
 # make default target to musl
