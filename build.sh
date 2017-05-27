@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#
+# Trigger the automatic building process on docker cloud.
+#
+# usage:
+#     ./build.sh [version]
+# notice:
+#     the rebuilding of a specified version is not supported for now.
+#
+
 TAG=$1
 
 BRANCH=`git branch | awk '$1=="*" {print $2}'`
