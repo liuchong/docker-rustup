@@ -21,14 +21,16 @@ Automated builded images on [store](https://store.docker.com/community/images/li
 the tags are:
 
 - stable/version: [(stable/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile)
-- stable-musl/version-musl: [(stable/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable_musl/Dockerfile)
+- stable-musl/version-musl: [(stable_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable_musl/Dockerfile)
 - beta: [(beta/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile)
-- beta-musl: [(beta/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta_musl/Dockerfile)
+- beta-musl: [(beta_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta_musl/Dockerfile)
 - nightly: [(nightly/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile)
-- nightly-musl: [(nightly/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl/Dockerfile)
+- nightly-musl: [(nightly_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl/Dockerfile)
+- nightly-onbuild: [(nightly_onbuild/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_onbuild/Dockerfile)
+- nightly-musl-onbuild: [(nightly_musl_onbuild/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl_onbuild/Dockerfile)
 - all3: [(all3/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile)
-- all3-musl, musl, latest: [(all3/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_musl/Dockerfile)
-- plus: [(all3/Dockerfile_plus)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_plus/Dockerfile)
+- all3-musl, musl, latest: [(all3_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_musl/Dockerfile)
+- plus: [(all3_plus/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_plus/Dockerfile)
 
 #### use the image
 
