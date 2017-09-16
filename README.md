@@ -21,14 +21,14 @@ Automated builded images on [store](https://store.docker.com/community/images/li
 the tags are:
 
 - stable/version: [(stable/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile)
-- stable-musl/version-musl: [(stable/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable/Dockerfile_musl)
+- stable-musl/version-musl: [(stable/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/stable_musl/Dockerfile)
 - beta: [(beta/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile)
-- beta-musl: [(beta/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta/Dockerfile_musl)
+- beta-musl: [(beta/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/beta_musl/Dockerfile)
 - nightly: [(nightly/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile)
-- nightly-musl: [(nightly/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly/Dockerfile_musl)
+- nightly-musl: [(nightly/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl/Dockerfile)
 - all3: [(all3/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile)
-- all3-musl, musl, latest: [(all3/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile_musl)
-- plus: [(all3/Dockerfile_plus)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile_plus)
+- all3-musl, musl, latest: [(all3/Dockerfile_musl)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_musl/Dockerfile)
+- plus: [(all3/Dockerfile_plus)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_plus/Dockerfile)
 
 #### use the image
 
