@@ -9,9 +9,20 @@
 #     the rebuilding of a specified version is not supported for now.
 #
 
-TAG=$1
+URL='https://raw.githubusercontent.com/rust-lang/rust/master/RELEASES.md'
+SED_P='/^V/{s/^Version \([1-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\) .*/\1/p;q}'
+BASH_P="^[1-9][0-9]*\.[0-9]+\.[0-9]+$"
 
-BRANCH=`git branch | awk '$1=="*" {print $2}'`
+if [ -z "$1" ]; then
+    TAG=`curl -s "$URL" | sed -n "$SED_P"`
+elif [[ "$1" =~ $BASH_P ]]; then
+    TAG=$1
+else
+    echo "Bad format of release version!" > /dev/stderr
+    exit 1
+fi
+
+__BRANCH__=`git branch | awk '$1=="*" {print $2}'`
 
 git checkout master
 
@@ -35,4 +46,4 @@ if [ $TAG ]; then
     git push -f origin "$TAG"
 fi
 
-git checkout $BRANCH
+git checkout $__BRANCH__
