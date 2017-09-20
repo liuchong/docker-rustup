@@ -2,6 +2,8 @@
 
 Automated builded images on [store](https://store.docker.com/community/images/liuchong/rustup/) and [hub](https://hub.docker.com/r/liuchong/rustup/) for rust-lang with musl added, using rustup "the ultimate way to install RUST".
 
+***tag changed: all3 -> all***
+
 ***note:***
 
 1. *Please check [liuchong/rustup tags](https://store.docker.com/community/images/liuchong/rustup/tags) on [store](https://store.docker.com/) instead of [Build Details](https://hub.docker.com/r/liuchong/rustup/builds/) on [hub](https://hub.docker.com/)*
@@ -28,9 +30,9 @@ the tags are:
 - nightly-musl: [(nightly_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl/Dockerfile)
 - nightly-onbuild: [(nightly_onbuild/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_onbuild/Dockerfile)
 - nightly-musl-onbuild: [(nightly_musl_onbuild/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl_onbuild/Dockerfile)
-- all3: [(all3/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3/Dockerfile)
-- all3-musl, musl, latest: [(all3_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_musl/Dockerfile)
-- plus: [(all3_plus/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all3_plus/Dockerfile)
+- all: [(all/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all/Dockerfile)
+- all-musl, musl, latest: [(all_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all_musl/Dockerfile)
+- plus: [(all_plus/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all_plus/Dockerfile)
 
 #### use the image
 
