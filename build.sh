@@ -9,15 +9,18 @@
 #     the rebuilding of a specified version is not supported for now.
 #
 
-URL='https://raw.githubusercontent.com/rust-lang/rust/master/RELEASES.md'
-SED_P='/^V/{s/^Version \([1-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\) .*/\1/p;q}'
+URL='https://www.rust-lang.org/en-US/'
+SED_P='/release-version/{s/.*<span>\(.*\)<\/span>.*/\1/p;q}'
 BASH_P="^[1-9][0-9]*\.[0-9]+\.[0-9]+$"
 
-if [ -z "$1" ]; then
+TAG="$1"
+
+if [ -z "$TAG" ]; then
     TAG=`curl -s "$URL" | sed -n "$SED_P"`
-elif [[ "$1" =~ $BASH_P ]]; then
-    TAG=$1
-else
+    echo "Use version \"$TAG\" from $URL"
+fi
+
+if [[ ! "$TAG" =~ $BASH_P ]]; then
     echo "Bad format of release version!" > /dev/stderr
     exit 1
 fi
