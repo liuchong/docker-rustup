@@ -15,6 +15,8 @@ Automated builded images on [store](https://store.docker.com/community/images/li
 
 # Usage
 
+## Images
+
 #### pull the images:
 
 ``` shell
@@ -64,6 +66,18 @@ CMD ["/your-app"]
 # CMD ["/your-app", "--production"]
 ```
 
+## Build script
+
+``` bash
+# Use automatical checked version from website for current stable builds:
+./build.sh
+# Use a specified stable version from command line:
+./build.sh 1.21.0
+# Do not build versioning tag, just pass a string which is not fit the version pattern,
+# as the first argument:
+./build.sh no-version
+./build.sh foo
+```
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup?ref=badge_large)
