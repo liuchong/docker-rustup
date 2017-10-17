@@ -36,7 +36,7 @@ the tags are:
 - nightly-musl-onbuild: [(nightly_musl_onbuild/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/nightly_musl_onbuild/Dockerfile)
 - all: [(all/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all/Dockerfile)
 - all-musl, musl, latest: [(all_musl/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all_musl/Dockerfile)
-- plus: [(all_plus/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/all_plus/Dockerfile)
+- plus: [(plus/Dockerfile)](https://github.com/liuchong/docker-rustup/blob/master/dockerfiles/plus/Dockerfile)
 
 #### use the image
 
@@ -80,4 +80,7 @@ CMD ["/your-app"]
 ```
 
 ## License
+
+[MIT](LICENSE)
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup?ref=badge_large)
