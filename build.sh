@@ -9,6 +9,8 @@
 #     the rebuilding of a specified version is not supported for now.
 #
 
+cd $(dirname $(readlink -f $0))
+
 VERSION="$1"
 
 # Modify global variable "VERSION", exit 1 if cannot get a valid version
@@ -33,7 +35,7 @@ get_version() {
 
 # Modify the dockerfiles to change "stable" to a specified version
 versioning() {
-    if [ -z "VERSION" ]; then
+    if [ -z "$VERSION" ]; then
         echo "No version specified" > /dev/stderr
         return
     fi
@@ -57,7 +59,7 @@ marking() {
 trigger() {
     echo "Trigger master/beta/nightly builds"
     git push -f origin build
-    if [ -z $VERSION ]; then return; fi
+    if [ -z "$VERSION" ]; then return; fi
     echo "Trigger versioning builds"
     git tag -d "$VERSION"
     git tag "$VERSION"
