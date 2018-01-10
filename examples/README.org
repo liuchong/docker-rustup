@@ -1,0 +1,13 @@
+* Build a static binary
+
+** Description
+
+A compare between building a static binary with local rust and docker-rustup build tool.
+
+** Note
+
+This "Makefile" works on debian os.
+
+Need install the packages such as "musl-tools" as the with-musl versions of dockerfiles of docker-rustup.
+
+Need download the openssl tar package and unpack it manually.
