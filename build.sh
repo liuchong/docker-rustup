@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#
 # Trigger the automatic building process on docker cloud.
 #
 # usage:
 #     ./build.sh [version]
 # notice:
 #     the rebuilding of a specified version is not supported for now.
-#
 
 cd $(dirname $(readlink -f $0))
 
