@@ -13,8 +13,8 @@ VERSION="$1"
 
 # Modify global variable "VERSION", exit 1 if cannot get a valid version
 get_version() {
-    local URL='https://www.rust-lang.org/en-US/'
-    local SED_P='/release-version/{s/.*<span>\(.*\)<\/span>.*/\1/p;q}'
+    local URL='https://www.rust-lang.org'
+    local SED_P='/Version/{s/.*>Version \(.*\)<.*/\1/p;q}'
     local BASH_P="^[1-9][0-9]*\.[0-9]+\.[0-9]+$"
 
     if [ -z "$VERSION" ]; then
