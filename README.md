@@ -8,6 +8,7 @@ Automated builded images on [store](https://store.docker.com/community/images/li
 
 ***note:***
 
+0. *Image buildings are ***triggered*** by automated builds on cloud.docker.com when "build branch" is updated by build.sh*
 1. *Please check [liuchong/rustup tags](https://store.docker.com/community/images/liuchong/rustup/tags) on [store](https://store.docker.com/) instead of [Build Details](https://hub.docker.com/r/liuchong/rustup/builds/) on [hub](https://hub.docker.com/)*
 2. *The "build branch" and "tags" are meaningless but just docker images(which are with stable/versions tags) for building*
 3. *the "version tags" are available from 1.15.0*
