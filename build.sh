@@ -14,8 +14,8 @@ VERSION="$1"
 # Modify global variable "VERSION", exit 1 if cannot get a valid version
 get_version() {
     local URL='https://www.rust-lang.org'
-    local SED_P='/Version/{s/.*>Version \(.*\)<.*/\1/p;q}'
-    local BASH_P="^[1-9][0-9]*\.[0-9]+\.[0-9]+$"
+    local VER_P="[1-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*"
+    local SED_P="/Version/{s/.*Version \($VER_P\).*/\1/p;q}"
 
     if [ -z "$VERSION" ]; then
         echo "Trying to get version from $URL"
@@ -25,9 +25,10 @@ get_version() {
         echo "Use version \"$VERSION\" from argument"
     fi
 
-    if [[ ! "$VERSION" =~ $BASH_P ]]; then
+    if [[ ! "$VERSION" =~ ^$VER_P$ ]]; then
         echo "Bad format of release version!" > /dev/stderr
         VERSION=
+        exit 1
     fi
 }
 
