@@ -74,13 +74,27 @@ build() {
 }
 
 # Change current branch to "build" for preparing of building
-__BRANCH__=`git branch | awk '$1=="*" {print $2}'`
-git checkout master
-git branch -D build
-git checkout -b build
-
-# Do the build
-build
+start() {
+    __BRANCH__=`git branch | awk '$1=="*" {print $2}'`
+    git checkout master
+    git branch -D build
+    git checkout -b build
+}
 
 # Change branch back
-git checkout $__BRANCH__
+end() {
+    git checkout $__BRANCH__
+    exit $1
+}
+
+main() {
+    # Initialize
+    trap 'end 0' RETURN
+    trap 'end 1' SIGHUP SIGINT SIGQUIT SIGTERM
+    start
+
+    # Do the build
+    build
+}
+
+main
