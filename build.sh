@@ -11,6 +11,17 @@ cd $(dirname $(readlink -f $0))
 
 VERSION="$1"
 
+# Push to github
+git_push() {
+    if [ -z "$1" ] || [ "$1" = "master" ]; then exit 1; fi
+    if [ -n "$GITHUB_API_KEY" ]; then
+        REMOTE="https://liuchong:$GITHUB_API_KEY@github.com/liuchong/docker-rustup"
+    else
+        REMOTE=origin
+    fi
+    git push -f $REMOTE $1
+}
+
 # Modify global variable "VERSION", exit 1 if cannot get a valid version
 get_version() {
     local URL='https://www.rust-lang.org'
@@ -57,12 +68,12 @@ marking() {
 # Trigger
 trigger() {
     echo "Trigger master/beta/nightly builds"
-    git push -f origin build
+    git_push build
     if [ -z "$VERSION" ]; then return; fi
     echo "Trigger versioning builds"
     git tag -d "$VERSION"
     git tag "$VERSION"
-    git push -f origin "$VERSION"
+    git_push "$VERSION"
 }
 
 # Build it
