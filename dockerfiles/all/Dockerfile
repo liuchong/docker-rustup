@@ -25,7 +25,7 @@ ENV OPENSSL_LIB_DIR=/usr/local/ssl/lib \
 
 # install all 3 toolchains
 RUN curl https://sh.rustup.rs -sSf | \
-    sh -s -- --default-toolchain stable -y && \
+    sh -s -- --default-toolchain 1.33.0 -y && \
     /root/.cargo/bin/rustup update beta && \
     /root/.cargo/bin/rustup update nightly
 

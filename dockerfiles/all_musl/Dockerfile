@@ -25,7 +25,7 @@ ENV OPENSSL_LIB_DIR=/usr/local/ssl/lib \
 
 # install all 3 toolchains
 RUN curl https://sh.rustup.rs -sSf | \
-    sh -s -- --default-toolchain stable -y && \
+    sh -s -- --default-toolchain 1.33.0 -y && \
     /root/.cargo/bin/rustup update beta && \
     /root/.cargo/bin/rustup update nightly
 
@@ -39,7 +39,7 @@ RUN apt-get update && \
 
 # install all 3 musl targets
 RUN rustup target add x86_64-unknown-linux-musl \
-    --toolchain stable-x86_64-unknown-linux-gnu && \
+    --toolchain 1.33.0-x86_64-unknown-linux-gnu && \
     rustup target add x86_64-unknown-linux-musl \
     --toolchain beta-x86_64-unknown-linux-gnu && \
     rustup target add x86_64-unknown-linux-musl \

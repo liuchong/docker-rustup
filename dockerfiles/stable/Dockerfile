@@ -25,6 +25,6 @@ ENV OPENSSL_LIB_DIR=/usr/local/ssl/lib \
 
 # install toolchain
 RUN curl https://sh.rustup.rs -sSf | \
-    sh -s -- --default-toolchain stable -y
+    sh -s -- --default-toolchain 1.33.0 -y
 
 ENV PATH=/root/.cargo/bin:$PATH
