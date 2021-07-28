@@ -1,6 +1,6 @@
 # rustup
 
-[![Build Status](https://travis-ci.org/liuchong/docker-rustup.svg?branch=master)](https://travis-ci.org/liuchong/docker-rustup)
+[![Build Status](https://github.com/liuchong/docker-rustup/actions/workflows/build.yml/badge.svg)](https://github.com/liuchong/docker-rustup/actions/workflows/build.yml)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup?ref=badge_shield)
 
 Automated builded images on [store](https://store.docker.com/community/images/liuchong/rustup/) and [hub](https://hub.docker.com/r/liuchong/rustup/) for rust-lang with musl added, using rustup "the ultimate way to install RUST".
