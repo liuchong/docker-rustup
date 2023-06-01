@@ -86,3 +86,7 @@ CMD ["/your-app"]
 [MIT](LICENSE)
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fliuchong%2Fdocker-rustup?ref=badge_large)
+
+# Build
+
+2023-06-01 02:00:28+00:00
